@@ -1,0 +1,28 @@
+{
+  "name": "cardknox",
+  "version": "1.0.0",
+  "description": "cardknox gateway api",
+  "main": "cardknox.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cardknox Development Inc",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "querystring": "^0.2.0",
+    "request": "^2.83.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cardknox/cardknox-node.git"
+  },
+  "keywords": [
+    "cardknox",
+    "gateway",
+    "credit cards"
+  ],
+  "bugs": {
+    "url": "https://github.com/Cardknox/cardknox-node/issues"
+  },
+  "homepage": "https://github.com/Cardknox/cardknox-node#readme"
+}

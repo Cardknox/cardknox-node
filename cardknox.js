@@ -10,7 +10,6 @@ function Cardknox(xKey, xSoftwareName, xSoftwareVersion) {
     this.transactionUrl = "https://x1.cardknox.com/gateway";
     this.xVersion = '4.5.5';
     this.xCommand = "";
-
     this.xCardNum = '';
     this.xExp = "";
     this.xCVV = "";
@@ -34,71 +33,6 @@ function Cardknox(xKey, xSoftwareName, xSoftwareVersion) {
     this.xAmount = '';
     this.xEmail = "";
     this.xInvoice = '';
-
-    this.setBillfirstName = function (xBillFirstName) {
-        var self = this
-        self.xBillFirstName = xBillFirstName
-    }
-    this.setBillLastName = function (xBillLastName) {
-        var self = this
-        self.xBillLastName = xBillLastName
-    }
-    this.setBillStreet = function (xBillStreet) {
-        var self = this
-        self.xBillStreet = xBillStreet
-    }
-    this.setBillCity = function (xBillCity) {
-        var self = this
-        self.xBillCity = xBillCity
-    }
-    this.setBillState = function (xBillState) {
-        var self = this
-        self.xBillState = xBillState
-    }
-    this.setBillZip = function (xBillZip) {
-        var self = this
-        self.xBillZip = xBillZip
-    }
-    this.setBillCountry = function (xBillCountry) {
-        var self = this
-        self.xBillCountry = xBillCountry
-    }
-    this.setBillPhone = function (xBillPhone) {
-        var self = this
-        self.xBillPhone = xBillPhone
-    }
-    this.setBilCompany = function (xBillCompany) {
-        var self = this
-        self.xBillCompany = xBillCompany
-    }
-    this.setAmount = function (xAmount) {
-        var self = this
-        self.xAmount = xAmount
-    }
-    this.setEmail = function (xEmail) {
-        var self = this
-        self.xEmail = xEmail
-    }
-    this.setInvoice = function (xInvoice) {
-        var self = this
-        self.xInvoice = xInvoice
-    }
-    this.setCardNum = function (xCardNum) {
-        var self = this
-        self.xCardNum = xCardNum
-    }
-    this.setExp = function (xExp) {
-        var self = this
-        self.xExp = xExp
-    }
-    this.setCVV = function (xCVV) {
-        var self = this
-        self.xCVV = xCVV
-    }
-    this.setCommand = function (xCommand) {
-        var self = this
-        self.xCommand = xCommand
-    }
 
     this.process = function () {
         var self = this
@@ -126,7 +60,16 @@ function Cardknox(xKey, xSoftwareName, xSoftwareVersion) {
                 xBillZip: self.xBillZip,
                 xBillCountry: self.xBillCountry,
                 xBillCompany: self.xBillCompany,
-                xBillPhone: self.xBillPhone
+                xBillPhone: self.xBillPhone,
+                xShipFirstName: self.xShipFirstName,
+                xShipLastName: self.xShipLastName,
+                xShipStreet: self.xShipStreet,
+                xShipCity: self.xShipCity,
+                xShipState: self.xShipState,
+                xShipZip: self.xShipZip,
+                xShipCountry: self.xShipCountry,
+                xShipCompany: self.xShipCompany,
+                xShipPhone: self.xShipPhone
             }
         }, function (error, response, body) {
             console.log('error:', error);

@@ -1,6 +1,6 @@
 {
   "name": "cardknox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "cardknox gateway api",
   "main": "cardknox.js",
   "scripts": {

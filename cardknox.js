@@ -34,10 +34,10 @@ function Cardknox(xKey, xSoftwareName, xSoftwareVersion) {
     this.xEmail = "";
     this.xInvoice = '';
 
-    this.process = function () {
+    this.process = function (callback) {
         var self = this
         console.log(self.transactionUrl);
-        var jsonResponse = "";
+        
         request.post({
             url: self.transactionUrl,
             form: {
@@ -75,9 +75,10 @@ function Cardknox(xKey, xSoftwareName, xSoftwareVersion) {
             console.log('error:', error);
             console.log('statusCode:', response && response.statusCode);
             console.log('body:', qs.parse(body));
-            jsonResponse = qs.parse(body)
+            callback(error, response, qs.parse(body));
+            // return qs.parse(body)
         })
-        return jsonResponse;
+
     }
 };
 
